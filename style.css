@@ -230,7 +230,7 @@ a.active, a:hover {
     }
     .education-image {
         margin-top: 20px;
-        max-width: 80%;
+        max-width: 50%;
     }
     .education-details {
         text-align: center;
