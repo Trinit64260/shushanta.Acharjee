@@ -430,6 +430,13 @@ margin-top: 50px;
   letter-spacing: 1px;
 
 }
+.about{
+  background-image: url(bg.2.png);
+  background-position: relative;
+  background-size: cover;
+  height: 600px;
+}
+
 @media screen and (max-width:900px) {
   .about-me{
     width: 100%;
