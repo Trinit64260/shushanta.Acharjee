@@ -228,21 +228,7 @@ a:hover,a.active{
       align-items: center;
     }
   
-    .education-image {
-      display: flex; /* Use flexbox */
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
-      margin-top: 20px;
-      width: 400px;
-      height: 300px; /* Set a fixed height for the container */
-      overflow: hidden;
-    }
-  
-    .education-image img {
-      width: 100%;
-      height: auto;
-      margin-left: 20px;
-    }
+   
   
   
   .education-details {
