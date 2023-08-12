@@ -446,10 +446,14 @@ margin-top: 50px;
   }
   .content .button a{
     padding: 8px 25px;
+     font-size: 14px;
   }
   .image-section{
     float: none;
     width: 100%;
   }
-  
+   .content h3{
+    font-size: 20px;
+    text-align:left;
+  }
 }
