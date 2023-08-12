@@ -423,8 +423,9 @@ margin-top: 50px;
   color: #2b9ec2;
 }
 
-.content h3{
+.content p{
   
+    font-size: 32px;
   letter-spacing: 1px;
 
 }
