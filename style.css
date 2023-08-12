@@ -107,16 +107,18 @@ a:hover,a.active{
 
 }
 .background-section {
-    background-image: url('IMG_20230804_200521_766.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
+  background-image: url('IMG_20230804_200521_766.jpg');
+  background-size: cover; /* Change this line */
+  background-position: center;
+  width: 100%; /* Add this line */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
 }
+
 
 .intro-text {
     max-width: 800px;
@@ -220,19 +222,159 @@ a:hover,a.active{
     color: #333;
   }
 
- @media screen and (max-width: 768px) {
-  .education-content {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .education-image {
-    margin-top: 20px;
-    width: 300px;
-  }
-
+  @media screen and (max-width: 768px) {
+    .education-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .education-image {
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      margin-top: 20px;
+      width: 400px;
+      height: 300px; /* Set a fixed height for the container */
+      overflow: hidden;
+    }
+  
+    .education-image img {
+      width: 100%;
+      height: auto;
+      margin-left: 120px;
+    }
+  
+  
   .education-details {
     text-align: center;
   }
 }
+.section1 {
+  background-image: url(bg.1.png);
+  background-position: relative;
+  background-size: cover;
+  height: 600px;
+}
+
+.leisure-interest {
+  float: right;
+  width: 40%;
+  color: #011f5b;
+  margin-top: 20px;
+  padding: 20px;
+  margin-right: 80px;
+}
+
+.leisure-image {
+  width: 624px;
+  height: 386px;
+  float: left;
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+.leisure-image img {
+  width: 100%;
+  height: auto;
+  padding-right: 20px;
+  margin: 20px;
+}
+
+.interesting-fact {
+  color: #011f5b;
+  background: transparent;
+  border: 1px solid #b0d2cd;
+  width: 600px;
+  height: 200px;
+  box-sizing: border-box;
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.interesting-fact h2 {
+  text-align: center;
+  margin-top: 4px;
+}
+
+.interesting-fact p {
+  font-family: 'Gelasio', serif;
+  font-size: 1.15em;
+}
+
+@media (max-width: 768px) {
+  .leisure-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .leisure-image img {
+    width: 100%;
+    height: auto;
+    padding-right: 0;
+    margin: 0;
+  }
+
+  .leisure-interest {
+    width: 100%;
+    float: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-right: 0;
+  }
+  .leisure-list{
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    height: auto;
+  }
+  .leisure-list ul li{
+    font-size: 24px;
+  }
+
   
+
+  .interesting-fact {
+    width: 400px;
+    margin-top: 20px;
+    padding: 20px;
+    height:auto;
+  }
+}
+/* Add your existing CSS here */
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .section1 {
+      height: auto;
+  }
+
+  .leisure-interest {
+      float: none;
+      width: 100%;
+      margin: 20px 0;
+      padding: 10px;
+  }
+
+  .leisure-image {
+      float: none;
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+  }
+
+  .leisure-image img {
+      width: 100%;
+      height: auto;
+  }
+  .leisure-list{
+    height: 200px;
+    width: 100%;
+    display: block;
+  }
+  
+
+  .interesting-fact {
+      width: 100%;
+      height: auto;
+  }
+}
