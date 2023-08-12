@@ -364,3 +364,92 @@ a:hover,a.active{
       height: auto;
   }
 }
+.about-me{
+  width: 100%;
+}
+.about-me h1{
+text-align: center;
+font-size: 40px;
+color:#2b9ec2;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+margin-top: 50px;
+}
+.about-me h1::after{
+  content: "";
+  height: 5px;
+  width: 200px;
+  background-color: #1470c8;
+  border-radius: 10px;
+  display: block;
+  margin:auto;
+}
+.wrapper{
+  padding: 0px 60px;
+
+}
+.content{
+  width: 60%;
+  float: left;
+  text-align:left;
+  padding: 0px 30px;
+}
+.image-section{
+  width: 40%;
+  float: right;
+  padding: 0px 30px;
+}
+.image-section img{
+  max-width: 100%;
+  height: auto;
+}
+.content .button{
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.content .button a{
+  color: #fff;
+  background-color: #2b9ec2;
+  border: 1px solid #2b9ec2;
+  padding: 10px 35px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 22px;
+  text-transform: uppercase;
+
+}
+.content .button a:hover{
+  background-color: #fff;
+  color: #2b9ec2;
+}
+
+.content h3{
+  
+  letter-spacing: 1px;
+
+}
+@media screen and (max-width:900px) {
+  .about-me{
+    width: 100%;
+    padding-top: 20px
+  }
+  .about-me h1{
+    font-size: 32px;
+  }
+  .content{
+    width: 100%;
+    float: none;
+  }
+  .content .button{
+    margin-top: 30px;
+    text-align: center;
+  }
+  .content .button a{
+    padding: 8px 25px;
+  }
+  .image-section{
+    float: none;
+    width: 100%;
+  }
+  
+}
