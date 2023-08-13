@@ -498,7 +498,11 @@ footer h1{
     padding-right: 2px;
     margin-left: 30%;
     
-  }
+  } 
+    footer h1{
+        font-size:27px;
+        margin-left:6px;
+    }
   .footer-text p{
     font-size: 20px;
   }
