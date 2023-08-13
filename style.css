@@ -463,3 +463,43 @@ margin-top: 50px;
     font-weight:normal;
   }
 }
+footer{
+  width: 100%;
+  background-color: #333;
+  margin-top: 40px;
+
+}
+footer h1{
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+.footer-text p{
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+.footer-icon{
+  align-items: center;
+  margin:0 auto;
+  position: relative;
+  margin-left: 42%;
+  
+}
+.footer-icon i{
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    padding-right: 10px;
+}
+@media(max-width:768px) {
+  .footer-icon{
+    padding-right: 2px;
+    margin-left: 30%;
+    
+  }
+  .footer-text p{
+    font-size: 20px;
+  }
+}
