@@ -493,6 +493,9 @@ footer h1{
     position: relative;
     padding-right: 10px;
 }
+.footer-icon i:hover {
+  color: #ff9900; /* Change the color on hover */
+}
 @media(max-width:768px) {
   .footer-icon{
     padding-right: 2px;
