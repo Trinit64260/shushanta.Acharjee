@@ -1,30 +1,25 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['fname'];
-    $visitor_email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
+    $email = $_POST["email"];
+    $subject = $_POST["subject"];
+    $message = $_POST["message"];
 
-    $email_from = 'info@yourwebsite.com'; // Change this to your actual email address
-    $email_subject = 'New Form Submission';
-    $email_body = "User Name: $name.\n".
-                  "User Email: $visitor_email.\n".
-                  "User Subject: $subject.\n".
-                  "User Message: $message.\n";
+    // Change this to your actual email address
+    $to = "shishirdune2022@gmail.com";
+    $subject = "New Contact Form Submission: $subject";
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    
+    $fullMessage = "Name: $fname $lname\n";
+    $fullMessage .= "Email: $email\n\n";
+    $fullMessage .= "Message:\n$message";
 
-    $to = 'shishirdune2022@gmail.com';
-
-    $headers = "From: $email_from \r\n";
-    $headers .= "Reply-to: $visitor_email \r\n";
-
-    $success = mail($to, $email_subject, $email_body, $headers);
-
-    if ($success) {
-        header("Location: contact.html?status=success");
+    if (mail($to, $subject, $fullMessage, $headers)) {
+        $response = "Thank you for your message. It has been sent successfully.";
     } else {
-        header("Location: contact.html?status=error");
+        $response = "Sorry, there was an error sending your message. Please try again later.";
     }
-} else {
-    header("Location: contact.html"); // Redirect if accessed directly without form submission
 }
 ?>
