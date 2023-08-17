@@ -1,10 +1,10 @@
 <?php
-$name = $_POST['name'];
+$name = $_POST['fname']; // Change to 'fname' to match your HTML input names
 $visitor_email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-$email_form = 'info@yourwebsite.com';
+$email_from = 'info@yourwebsite.com'; // Corrected variable name
 
 $email_subject = 'New Form Submission';
 
@@ -16,10 +16,9 @@ $email_body = "User Name: $name.\n".
 $to = 'shishirdune2022@gmail.com';
 
 $headers = "From: $email_from \r\n";
+$headers .= "Reply-to: $visitor_email \r\n"; // Corrected header variable name
 
-$headers .= "Reply_to: $visitor_email \r\n";
+mail($to, $email_subject, $email_body, $headers);
 
-mail($to,$email_subject,$email_body,$headers);
-
-header("Location: contact.html")
+header("Location: contact.html");
 ?>
