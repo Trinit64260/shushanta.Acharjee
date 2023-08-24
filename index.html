@@ -165,6 +165,12 @@
     </div>
 </footer>
 
-      
+      <script>
+        window.addEventListener("scroll", function () {
+            const yOffset = window.pageYOffset;
+            const bgImage = document.querySelector(".bg-image");
+            bgImage.style.transform = `translateY(${yOffset * 0.5}px)`;
+        });
+    </script> 
 </body>
 </html>
