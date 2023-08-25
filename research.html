@@ -14,8 +14,6 @@
     text-align: center;
   }
   .research-text {
-position: relative;
-top: 20px;
     padding: 10px;
     text-align: justify;
     font-size: 26px;
@@ -27,22 +25,15 @@ top: 20px;
     
   }
   .pictures {
-    
+    display: flex;
+    flex-direction: column;
     padding: 20px;
   }
-  .picture1 {
-    float: left;
-    width: 49%;
+  .picture {
      flex: 0 0 48%;
     padding-right: 10px;
   }
-  .picture2 {
-    float: right;
-    width: 49%;
-     flex: 0 0 48%;
-    padding-right: 10px;
-  }
-   img{
+  .picture img{
     width: 100%;
     height: auto;
   }
@@ -56,12 +47,12 @@ top: 20px;
     box-shadow: 0px 15px 20px rgba(0,0,0,0.2);
   }
   @media(max-width: 768px){
-    .picture1{
-      width: 100%;
+    .pictures {
+        flex-direction: column;
     }
-    .picture2{
-      width: 100%;
-      padding-bottom: 10px;
+    .picture{
+        flex-direction: column;
+        padding-bottom: 10px;
     }
     .research-text h2 {
     font-weight: bold;
@@ -86,10 +77,10 @@ top: 20px;
 </header>
 
 <div class="pictures">
-  <div class="picture1">
+  <div class="picture">
     <img src="image001.jpg" class="img-fluid" alt="Responsive image">
   </div>
-  <div class="picture2">
+  <div class="picture">
     <img src="1520127386548.jpeg" class="img-fluid" alt="Responsive image">
   </div>
 </div>
