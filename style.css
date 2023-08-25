@@ -168,8 +168,11 @@ span{
     display: inline-block;
     margin: 0 auto;
   }
-  .background-text{
-    font-size: 18px;
+  .background-text p{
+    font-size: 12px;
+  }
+  .background-text h1{
+    font-size: 16px;
   }
 }
 .course{
