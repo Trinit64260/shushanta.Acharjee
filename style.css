@@ -112,6 +112,7 @@ a:hover,a.active{
   background-image: url('IMG_20230804_200521_766.jpg');
   background-size: contain; /* Change this line */
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%; /* Add this line */
   height: 100vh;
   display: flex;
