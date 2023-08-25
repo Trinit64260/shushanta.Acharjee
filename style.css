@@ -165,6 +165,10 @@ span{
     align-items: center;
     margin-left: 50px;
   }
+    .background-image img{
+  width: 700px;
+
+  }
   .cv-button{
     display: inline-block;
     margin: 0 auto;
