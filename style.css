@@ -168,6 +168,9 @@ span{
     display: inline-block;
     margin: 0 auto;
   }
+  .background-text{
+    font-size: 18px;
+  }
 }
 .course{
     width: 80%;
