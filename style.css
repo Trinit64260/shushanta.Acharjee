@@ -8,6 +8,10 @@
 body{
   font-family: montserrat;
 }
+
+.leisure-image figcaption {
+  font-family: 'Gelasio', serif; font-size: 1.15em; color: #011f5b;
+}
 nav{
   background: #0082e6;
   height: 80px;
