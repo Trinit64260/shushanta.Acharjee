@@ -9,6 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="contact.css">
+    <style>
+        .success-message {
+  color: #28a745; /* Green color */
+  font-size: 18px;
+  
+  margin-top: 10px;
+}
+    </style>
 </head>
 <body>
     <section id="section-wrapper">
@@ -65,9 +73,26 @@
                         </div>
                     </div>
                     <input type="submit" value="Send message" class="submit-button">
+                    <div id="success-message"></div>
+                
                 </form>
             </div>
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.querySelector("form");
+          const successMessage = document.getElementById("success-message");
+      
+          form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+            // You can add additional code here to handle form validation and submission
+      
+            // Display the success message
+            successMessage.textContent = "Sent successfully!";
+            successMessage.classList.add("success-message"); // Add the class
+          });
+        });
+      </script>
 </body>
 </html>
