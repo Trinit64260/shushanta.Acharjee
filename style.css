@@ -294,7 +294,7 @@ span{
   height: 386px;
   float: left;
   margin-top: 60px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .leisure-image img {
