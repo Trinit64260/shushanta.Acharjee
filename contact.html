@@ -13,7 +13,7 @@
         .success-message {
   color: #28a745; /* Green color */
   font-size: 18px;
-  
+  text-align: center;
   margin-top: 10px;
 }
     </style>
@@ -65,11 +65,11 @@
                             <input type="text" name="lname" placeholder="Last Name">
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Email">
+                            <input type="email" name="email" placeholder="Email" required>
                         </div>
                        
                         <div class="form-group">
-                            <textarea name="message" placeholder="Write your message"></textarea>
+                            <textarea name="message" placeholder="Write your message" required></textarea>
                         </div>
                     </div>
                     <input type="submit" value="Send message" class="submit-button">
