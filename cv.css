@@ -169,6 +169,7 @@
         .background-section {
             height: auto;
         }
+        
     .background-image{
       float: none;
       display: flex;
@@ -177,8 +178,8 @@
       margin-left: 50px;
     }
       .background-image img{
-    
-    
+    width: 250px;
+    margin-right: 20px;
     }
     .cv-button{
       display: inline-block;
