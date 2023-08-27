@@ -113,7 +113,7 @@ a:hover,a.active{
 
 .background-section {
 max-width: 90%;
-height: auto;
+height: 700px;
 padding: 20px;
 margin: 0% 4%;
 margin-top: 20px;
@@ -168,6 +168,9 @@ background-color: #1470c8;
   justify-content: center;
   align-items: center;
   margin-left: 50px;
+}
+.background-section {
+  height: auto;
 }
   .background-image img{
 width: 900px;
@@ -550,4 +553,38 @@ color: #ff9900; /* Change the color on hover */
 .footer-text p{
   font-size: 20px;
 }
+}
+.intro-box {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  background-color:#011f5b;
+  border: 2px solid #011f5b;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #fff;
+  max-width: 420px;
+  overflow: hidden;
+  white-space: nowrap;
+  transform-origin: right center;
+  animation: slide-in 2s ease-in-out forwards;
+}
+.intro-box h1{
+  font-size: 27px;
+}
+.intro-box h2{
+  font-size:25px ;
+}
+@keyframes slide-in {
+  0% {
+    transform: translateX(80%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media(max-width:900px){
+  .intro-box{
+    margin-left: 150px;
+  }
 }
