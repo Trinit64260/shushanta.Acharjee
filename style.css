@@ -586,5 +586,6 @@ color: #ff9900; /* Change the color on hover */
 @media screen and (max-width:768px){
   .intro-box{
     padding: 10px 20px;
+     z-index: -1;
   }
 }
