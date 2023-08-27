@@ -583,8 +583,4 @@ color: #ff9900; /* Change the color on hover */
     transform: translateX(0);
   }
 }
-@media(max-width:900px){
-  .intro-box{
-    margin-left: 150px;
-  }
-}
+
