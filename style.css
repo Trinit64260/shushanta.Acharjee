@@ -563,9 +563,9 @@ color: #ff9900; /* Change the color on hover */
   border-radius: 5px;
   font-size: 24px;
   color: #fff;
-  max-width: 420px;
+  max-width:100%;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
   transform-origin: right center;
   animation: slide-in 2s ease-in-out forwards;
 }
@@ -583,4 +583,6 @@ color: #ff9900; /* Change the color on hover */
     transform: translateX(0);
   }
 }
-
+@media screen and (max-width:768px){
+  padding: 20px 10px;
+}
