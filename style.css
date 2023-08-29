@@ -592,6 +592,7 @@ color: #ff9900; /* Change the color on hover */
   .intro-box {
     height: 200px;
     overflow: hidden;
+    z-index: -1;
   }
   
   .intro-box h1 {
