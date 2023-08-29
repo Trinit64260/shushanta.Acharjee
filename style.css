@@ -587,24 +587,29 @@ color: #ff9900; /* Change the color on hover */
     transform: translateX(0);
   }
 }
-@media screen and (max-width:768px){
-  .intro-box{
-    padding: 4px 20px;
-     z-index: -1;
-     height: 200px;
-    ;
-  }
 
-  .intro-box h1{
-    font-size: 22px;
+@media screen and (max-width: 768px) {
+  .intro-box {
+    height: 200px;
+    overflow: hidden;
   }
-  .intro-box p{
+  
+  .intro-box h1 {
     font-size: 18px;
+    margin-bottom: 5px;
   }
-  .intro-box h2{
-    font-size: 20px;
+  
+  .intro-box h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .intro-box p {
+    font-size: 14px;
+    margin-bottom: 5px;
   }
 }
+
 .background-image img:hover{
   opacity: 80%;
 }
