@@ -570,11 +570,15 @@ color: #ff9900; /* Change the color on hover */
   animation: slide-in 2s ease-in-out forwards;
 }
 .intro-box h1{
-  font-size: 27px;
+  font-size: 26px;
+}
+.intro-box p{
+  font-size: 20px;
 }
 .intro-box h2{
-  font-size:25px ;
+  font-size: 24px;
 }
+
 @keyframes slide-in {
   0% {
     transform: translateX(80%);
@@ -588,4 +592,16 @@ color: #ff9900; /* Change the color on hover */
     padding: 10px 20px;
      z-index: -1;
   }
+  .intro-box h1{
+    font-size: 22px;
+  }
+  .intro-box p{
+    font-size: 18px;
+  }
+  .intro-box h2{
+    font-size: 20px;
+  }
+}
+.background-image img:hover{
+  opacity: 80%;
 }
