@@ -587,30 +587,25 @@ color: #ff9900; /* Change the color on hover */
     transform: translateX(0);
   }
 }
-
-@media screen and (max-width: 768px) {
-  .intro-box {
-    height: 200px;
-    overflow: hidden;
-    z-index: -1;
+@media screen and (max-width:768px){
+  .intro-box{
+    padding: 10px 20px;
+     z-index: -1;
+     margin-bottom: 5px;
   }
-  
-  .intro-box h1 {
+  .intro-box h1{
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  .intro-box p{
     font-size: 18px;
     margin-bottom: 5px;
   }
-  
-  .intro-box h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .intro-box p {
-    font-size: 14px;
+  .intro-box h2{
+    font-size: 20px;
     margin-bottom: 5px;
   }
 }
-
 .background-image img:hover{
   opacity: 80%;
 }
