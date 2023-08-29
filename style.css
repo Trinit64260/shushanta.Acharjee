@@ -589,9 +589,12 @@ color: #ff9900; /* Change the color on hover */
 }
 @media screen and (max-width:768px){
   .intro-box{
-    padding: 10px 20px;
+    padding: 4px 20px;
      z-index: -1;
+     height: 200px;
+    ;
   }
+
   .intro-box h1{
     font-size: 22px;
   }
