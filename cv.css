@@ -135,6 +135,7 @@
     .background-image img{
      max-width: 350px;
     height: auto;
+         margin-top: 20px;
     }
     /*
     .cv-button {
