@@ -1,158 +1,49 @@
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-  }
-  *{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-  }
-  body{
-    font-family: montserrat;
-  }
-  nav{
-    background:  #011f5b;
-    height: 80px;
+footer{
     width: 100%;
-  
-  }
-  label.logo{
-    color: white;
-    font-size: 17px;
-    line-height: 80px;
-    padding-left: 0 80px ;
-    font-weight: bold;
-  
-  
-  }
-  nav ul{
-    float: right;
-    margin-right: 20px;
-  }
-  nav ul li{
-    display: inline-block;
-    line-height: 70px;
-    margin:0 5px;
-  }
-  nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px ;
-    border-radius: 3px;
-    text-transform: uppercase;
-  }
-  a.active,a:hover{
-    background: #1b9bff;
-    transition: .5s;
-  
-  }
-  .checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-  }
-  .checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-  }
-  #check{
-    display: none;
-  
-  }
-  @media (max-width: 952px){
-    label.logo{
-        font-size: 18px;
-        padding-left: 13px;
+    background-color: #333;
+    margin-top: 40px;
+    
     }
-    nav ul li a{
-        font-size: 16px;
-        
-    }
-  }
-  @media (max-width:858px){
-  .checkbtn{
-    display: block;
-  
-  }
-  ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
+    footer h1{
+    font-size: 30px;
     text-align: center;
-    transform: all .5s;
-  
-  }
-  
-  nav ul li{
-    display: block;
-  
-  }
-  nav ul li a{
-    font-size: 18px;
-  
-  }
-  a:hover,a.active{
-    background: none;
-    color: #0082e6;
-  }
-  #check:checked ~ul{
-    left:0;
-  }
-  
-  }
- .courses{
-    max-width: 100%;
-    margin-top: 20px;
-  
-    margin-bottom: 50px;
-    background: #d4e6f1;
-   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border: 2px solid black;*/
- }
- .course1{
-        background:#d4e6f1;
-        color:  #011f5b;
-        padding: 10px;
-        margin: 18px;
-        margin-left: 40px;
-        font-size: 20px;
+    color: white;
+    margin-top: 30px;
     }
-    .course1 p{
-        font-size: 18px;
+    .footer-text p{
+    text-align: center;
+    color: white;
+    margin-top: 10px;
     }
-    .course1 h1,.course1 h2{
-        font-size: 20px;
+    .footer-icon{
+    align-items: center;
+    margin:0 auto;
+    position: relative;
+    margin-left: 42%;
+    
     }
-    .course1 p li{
-        font-size: 18px;
- 
+    .footer-icon i{
+      font-size: 40px;
+      color: #fff;
+      position: relative;
+      padding-right: 10px;
     }
-    #header{
-        font-size: 28px;
-        margin-bottom: 10px;
+    .footer-icon i:hover {
+    color: #ff9900; /* Change the color on hover */
     }
-    @media(max-width: 990px){
-        .courses{
-            margin-right: 5%;
-            margin-left: 5%;
-        }
-        .course1 h1,.course1 h2{
-            font-size: 18px;
-        }
-        .course1{
-            font-size: 17px;
-        }
+    @media(max-width:768px) {
+    .footer-icon{
+      padding-right: 2px;
+      margin-left: 30%;
+      
+    } 
+      footer h1{
+          font-size:27px;
+          margin-left:6px;
+      }
+    .footer-text p{
+      font-size: 20px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
     }
