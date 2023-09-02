@@ -1,81 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Research</title>
+    <link rel="stylesheet" href="re.css">
     
-<style>
- 
- body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-header {
-  background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
-}
-.research-text {
-  padding: 10px;
-  text-align: justify;
-  font-size: 26px;
-}
-.research-text h2 {
-  color: #333;
-  font-size: 25px;
-  font-weight: bold;
-  
-}
-.pictures {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-.picture {
-   flex: 0 0 48%;
-  padding-right: 10px;
-}
-.picture img{
-  width: 100%;
-  height: auto;
-}
-.sec{
-  background-color: #fff;
-  border-radius: 20px;
-  border: 2px solid black;
-  padding: 100px 60px;
-  width: 80%;
-  margin: 5%;
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.2);
-}
-@media(max-width: 1000px){
-  .pictures {
-      flex-direction: column;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Gelasio:ital,wght@1,600&display=swap" rel="stylesheet">
+ <script src="https://kit.fontawesome.com/71258d5dfb.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="footer.css">
+ <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
   }
-  .picture{
-      flex-direction: column;
-      padding-bottom: 10px;
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  .research-text {
+    padding: 10px;
+    text-align: justify;
+    font-size: 26px;
   }
   .research-text h2 {
-  font-weight: bold;
-  font-size: 22px;
-}
-p{
-  font-size: 20px;
-}
-.sec{
-  width: 90%;
-  height: auto;
-  padding: 30px 8px ;
-}
-
-}
-   
-*{
+    color: #333;
+    font-size: 25px;
+    font-weight: bold;
+    
+  }
+  .pictures {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+  }
+  .picture {
+    flex: 0 0 48%;
+   padding-right: 10px;
+ }
+ .picture img{
+    width: 100%;
+    height: auto;
+  }
+ .sec{
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 100px 60px;
+    width: 80%;
+    margin: 5%;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.2);
+  }
+  @media(max-width:1084px){
+    .pictures {
+        flex-direction: column;
+    }
+    .picture{
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    .research-text h2 {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  p{
+    font-size: 20px;
+  }
+  .sec{
+    width: 90%;
+    height: auto;
+    padding: 30px 8px ;
+  }
+  
+  }
+    
+    
+  
+  *{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+  }
+  .hhh{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100px;
   }
   body{
     font-family: montserrat;
@@ -84,7 +99,7 @@ p{
     background:  #011f5b;
     height: 80px;
     width: 100%;
-  
+    z-index: 1000;
   }
   label.logo{
     color: white;
@@ -95,6 +110,7 @@ p{
   
   
   }
+
   nav ul{
     float: right;
     margin-right: 20px;
@@ -116,6 +132,7 @@ p{
     transition: .5s;
   
   }
+   
   .checkbtn{
     font-size: 30px;
     color: white;
@@ -129,12 +146,14 @@ p{
     margin-right: 40px;
     cursor: pointer;
     display: none;
-  }
+  } 
   #check{
     display: none;
   
   }
-  @media (max-width: 1083px){
+  
+  @media (max-width: 952px){
+
     label.logo{
         font-size: 18px;
         padding-left: 13px;
@@ -143,27 +162,32 @@ p{
         font-size: 16px;
         
     }
-  }
-  @media (max-width:1083px){
+  }  
+  @media (max-width:1084px){
   .checkbtn{
     display: block;
   
   }
-  ul{
+ 
+  .sav{
+  
     position: fixed;
+    
     width: 100%;
+     
     height: 100vh;
     background: #2c3e50;
     top: 80px;
     left: -100%;
     text-align: center;
     transform: all .5s;
+    z-index: 999;
   
   }
-  
+ 
   nav ul li{
     display: block;
-  
+    
   }
   nav ul li a{
     font-size: 18px;
@@ -178,14 +202,7 @@ p{
   }
   
   }
-</style>
-<link rel="stylesheet" href="nav1.css">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Gelasio:ital,wght@1,600&display=swap" rel="stylesheet">
- <script src="https://kit.fontawesome.com/71258d5dfb.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="nav.css">
-     <link rel="stylesheet" href="footer.css">
+ </style>
 </head>
 <body>
     <nav>
@@ -194,8 +211,8 @@ p{
                <i class="fas fa-bars"></i>
            </label>
        <label class="logo">Shushanta Acharjee</label>
-       <ul>
-           <li><a href="#">HOME</a></li>
+       <ul class="sav">
+           <li><a href="index.html">HOME</a></li>
            <li><a href="teaching.html">TEACHING</a></li>
            <li><a class="active" href="research.html">RESEARCH</a></li>
            <li><a href="venture.html">VENTURES</a></li>
@@ -204,37 +221,37 @@ p{
            <li><a href="contact.html">CONTACT</a></li>
        </ul>
    </nav>
-<section class="sec">
-<header>
-  <h1>My research</h1>
-</header>
+  <section class="sec">
+    <header>
+        <h1>My research</h1>
+      </header>
+      <div class="pictures">
+        <div class="picture">
+            <img src="image001.jpg" alt="">
+          
+        </div>
+        <div class="picture">
+          <img src="1520127386548.jpeg"  alt="">
+        </div>
+      </div>
+      <div class="research-text">
+        <p>My research trajectory predominantly encompasses two main arenas. Initially, my focus was on the intricate dynamics of social enterprises, probing into factors that influence social entrepreneurship, their performance metrics, and strategies for internationalization, which constitutes a bulk of my current work. Subsequently, I ventured into examining entrepreneurship's pivotal role in economic reformation, exploring its potential as an alternative to traditional welfare state paradigms. As a social entrepreneur and an academic, I strive to seamlessly integrate theory with practice, ensuring my findings are academically enriching while also being pragmatically applicable.</p>
+        </div>
+        
+        <div class="research-text">
+          <h2>Behind the Scenes of Impactful Ventures :Exploring Social Enterprises</h2>
+          <p>My foremost area of research is centered on social enterprises, a focus that also forms the backbone of my Ph.D. dissertation. Central to this research has been a comprehensive literature review, facilitated by bibliometric analysis. Through this, I've dissected two decades of scholarship on social enterprise, identifying pivotal research gaps. With these insights, I've delved into understanding the motivating factors for individuals' involvement in social enterprises, determinants of their growth, and the variables influencing their performance. In addition, I've extended my research to the realm of internationalization strategies for SMEs.</p>
+          
+        </div>
+        
+        <div class="research-text">
+          <h2>Economic Renaissance through Entrepreneurship :Charting a New Path</h2>
+          <p>Currently, I'm in the nascent stages of exploring the transformative potential of businesses as catalysts for economic reformation. As part of this exploration, I've embarked on penning a book titled "Alternatives to the Welfare State in Developing Contexts." Together with my co-authors, we're probing the potential of responsible businesses to either supplement or even reshape the traditional roles and structures of welfare states.
+          </p>
+        </div>
 
-<div class="pictures">
-  <div class="picture">
-    <img src="image001.jpg" class="img-fluid" alt="Responsive image">
-  </div>
-  <div class="picture">
-    <img src="1520127386548.jpeg" class="img-fluid" alt="Responsive image">
-  </div>
-</div>
-
-<div class="research-text">
-<p>My research trajectory predominantly encompasses two main arenas. Initially, my focus was on the intricate dynamics of social enterprises, probing into factors that influence social entrepreneurship, their performance metrics, and strategies for internationalization, which constitutes a bulk of my current work. Subsequently, I ventured into examining entrepreneurship's pivotal role in economic reformation, exploring its potential as an alternative to traditional welfare state paradigms. As a social entrepreneur and an academic, I strive to seamlessly integrate theory with practice, ensuring my findings are academically enriching while also being pragmatically applicable.</p>
-</div>
-
-<div class="research-text">
-  <h2>Behind the Scenes of Impactful Ventures :Exploring Social Enterprises</h2>
-  <p>My foremost area of research is centered on social enterprises, a focus that also forms the backbone of my Ph.D. dissertation. Central to this research has been a comprehensive literature review, facilitated by bibliometric analysis. Through this, I've dissected two decades of scholarship on social enterprise, identifying pivotal research gaps. With these insights, I've delved into understanding the motivating factors for individuals' involvement in social enterprises, determinants of their growth, and the variables influencing their performance. In addition, I've extended my research to the realm of internationalization strategies for SMEs.</p>
-  
-</div>
-
-<div class="research-text">
-  <h2>Economic Renaissance through Entrepreneurship :Charting a New Path</h2>
-  <p>Currently, I'm in the nascent stages of exploring the transformative potential of businesses as catalysts for economic reformation. As part of this exploration, I've embarked on penning a book titled "Alternatives to the Welfare State in Developing Contexts." Together with my co-authors, we're probing the potential of responsible businesses to either supplement or even reshape the traditional roles and structures of welfare states.
-  </p>
-</div>
-</section>
-<footer>
+  </section>  
+  <footer>
     <div>
         <h1>Shushanta Acharjee (Ph.D. Candidate)</h1>
         <div class="footer-text">
@@ -251,14 +268,5 @@ p{
         </div>
     </div>
 </footer>
-<script>
-    // JavaScript/jQuery code to handle navigation toggle
-    $(document).ready(function() {
-      $("#check").click(function() {
-        $("ul").toggleClass("show");
-      });
-    });
-  </script>
-  
 </body>
 </html>
