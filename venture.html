@@ -6,6 +6,7 @@
   <title>Community and Welfare</title>
   <link rel="stylesheet" href="venture.css">
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Gelasio:ital,wght@1,600&display=swap" rel="stylesheet">
@@ -34,6 +35,16 @@
       <h1>Business </h1>
     </header>
     
+    <div class="slideshow-container">
+        <img src="IMG_20230911_233509_701.jpg" alt="Image 1">
+        <img src="IMG_20230911_233446_278.jpg" alt="Image 2">
+        <img src="IMG_20230911_233539_998.jpg" alt="Image 3">
+        <img src="IMG_20230911_233609_820.jpg" alt="Image 4">
+      </div>
+      <div class="manual-navigation">
+        <button id="prev-button">Previous</button>
+        <button id="next-button">Next</button>
+      </div>
     
     <div class="research-text">
     <h1>Art For Change (2019- Present )</h1>
@@ -64,5 +75,31 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slideshow-container img");
+        
+        function showSlide(index) {
+          slides[currentSlide].style.display = "none";
+          currentSlide = index;
+          slides[currentSlide].style.display = "block";
+        }
+        
+        function nextSlide() {
+          showSlide((currentSlide + 1) % slides.length);
+        }
+        
+        function prevSlide() {
+          showSlide((currentSlide - 1 + slides.length) % slides.length);
+        }
+        
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        
+        // Manual navigation buttons
+        document.querySelector("#prev-button").addEventListener("click", prevSlide);
+        document.querySelector("#next-button").addEventListener("click", nextSlide);
+      </script>
+      
 </body>
 </html>
