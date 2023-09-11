@@ -186,3 +186,61 @@ body {
     color: black;
     font-weight: bold;
   }
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slideshow-container img {
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+  
+  .slideshow-container img:first-child {
+    display: block;
+  }
+  /* Style for the manual navigation buttons */
+.manual-navigation {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .manual-navigation button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .manual-navigation button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for the manual navigation buttons */
+  .manual-navigation {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .manual-navigation button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .manual-navigation button:hover {
+    background-color: #0056b3;
+  }
