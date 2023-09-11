@@ -317,7 +317,7 @@ color: #011f5b;
 background: transparent;
 border: 1px solid #b0d2cd;
 width: 600px;
-height: 200px;
+height: auto;
 box-sizing: border-box;
 box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.1);
 }
