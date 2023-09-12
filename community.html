@@ -34,7 +34,16 @@
     <header>
       <h1>Community and Welfare</h1>
     </header>
-    
+      <div class="slideshow-container">
+        <img src="img_4_1694525404247.jpg" alt="Image 1">
+        <img src="img_3_1694525139956.jpg" alt="Image 2">
+        <img src="img_2_1694525098396.jpg" alt="Image 3">
+        <img src="IMG_20230912_193137_507.jpg" alt="Image 4">
+      </div>
+      <div class="manual-navigation">
+        <button id="prev-button">Previous</button>
+        <button id="next-button">Next</button>
+      </div>
     
     <div class="research-text">
     <h1>Golap-Bandhan Student Association (Feb 2012 - Mar 2014)</h1>
@@ -73,5 +82,31 @@
             </div>
         </div>
     </footer>
+
+  
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slideshow-container img");
+        
+        function showSlide(index) {
+          slides[currentSlide].style.display = "none";
+          currentSlide = index;
+          slides[currentSlide].style.display = "block";
+        }
+        
+        function nextSlide() {
+          showSlide((currentSlide + 1) % slides.length);
+        }
+        
+        function prevSlide() {
+          showSlide((currentSlide - 1 + slides.length) % slides.length);
+        }
+        
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        
+        // Manual navigation buttons
+        document.querySelector("#prev-button").addEventListener("click", prevSlide);
+        document.querySelector("#next-button").addEventListener("click", nextSlide);
+      </script>
 </body>
 </html>
