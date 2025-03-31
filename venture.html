@@ -1,71 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community and Welfare</title>
-  <link rel="stylesheet" href="venture.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Ventures</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Gelasio:ital,wght@1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
- <script src="https://kit.fontawesome.com/71258d5dfb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/71258d5dfb.js" crossorigin="anonymous"></script>
+    
+    <style>
+        :root {
+            --primary-color: #0b3954;
+            --secondary-color: #087E8B;
+            --accent-color: #FF5A5F;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #495057;
+            --bg-color: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            padding-top: 80px; /* For fixed navbar */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        /* Navbar styles */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: white !important;
+            font-size: 1.5rem;
+        }
+        
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: white !important;
+        }
+        
+        .navbar-toggler {
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        /* Ventures section styles */
+        .ventures-section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 15px 30px rgba(0,0,0,0.1);
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 90%;
+        }
+        
+        .ventures-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .ventures-header h1 {
+            color: var(--primary-color);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .ventures-header h1:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 25%;
+        }
+        
+        /* Slideshow styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 400px;
+            margin-bottom: 2rem;
+        }
+        
+        .slideshow-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: none;
+            border-radius: 10px;
+        }
+        
+        .slideshow-container img:first-child {
+            display: block;
+        }
+        
+        .manual-navigation {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .manual-navigation button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .manual-navigation button:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .ventures-text {
+            margin-bottom: 2.5rem;
+        }
+        
+        .ventures-text h1 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .ventures-text h2 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ventures-text p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ventures-text .mission {
+            font-style: italic;
+            color: var(--secondary-color);
+            font-weight: 500;
+            padding: 1rem;
+            border-left: 4px solid var(--accent-color);
+            background-color: rgba(8, 126, 139, 0.1);
+            margin: 1.5rem 0;
+        }
+        
+        .ventures-text .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            padding: 0.5rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .ventures-text .btn-primary:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        footer h1 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-text p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .footer-icon {
+            margin-top: 1.5rem;
+        }
+        
+        .footer-icon a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-icon a:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .ventures-section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .ventures-text p {
+                font-size: 1rem;
+            }
+            
+            .ventures-text h1 {
+                font-size: 1.7rem;
+            }
+            
+            .ventures-text h2 {
+                font-size: 1.2rem;
+            }
+            
+            .slideshow-container,
+            .slideshow-container img {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-   <nav>
-         <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-     <label class="logo">Shushanta Acharjee</label>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="teaching.html">TEACHING</a></li>
-            <li><a href="research.html">RESEARCH</a></li>
-            <li><a class="active" href="#">VENTURES</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a  href="community.html">COMMUNITY & WELFARE </a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-    </nav>
-  <section class="sec">
-    <header>
-      <h1>Business </h1>
-    </header>
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Shushanta Acharjee</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link"  href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="teaching.html">Teaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Ventures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cv.html">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="community.html">Community & Welfare</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Ventures Section -->
+    <div class="container">
+        <section class="ventures-section">
+            <div class="ventures-header">
+                <h1>Business</h1>
+            </div>
+            
+            <div class="slideshow-container">
+                <img src="IMG_20230911_233509_701.jpg" alt="Art For Change Image 1">
+                <img src="IMG_20230911_233446_278.jpg" alt="Art For Change Image 2">
+                <img src="IMG_20230911_233539_998.jpg" alt="Art For Change Image 3">
+                <img src="IMG_20230911_233609_820.jpg" alt="Art For Change Image 4">
+            </div>
+            
+            <div class="manual-navigation">
+                <button id="prev-button">Previous</button>
+                <button id="next-button">Next</button>
+            </div>
+            
+            <div class="ventures-text">
+                <h1>Art For Change (2019- Present)</h1>
+                <h2>Co-founder</h2>
+                <p>Nestled in Sylhet, Bangladesh, I co-founded the social enterprise Art For Change alongside Anupam Acharjee and Forhad Ahmed. More than just a business, Art For Change stands as a movement, giving a voice to the untapped talents of students from marginalized communities.</p>
+                
+                <p class="mission"><strong>Our Mission is:</strong> "Enlightening marginalized communities through art."</p>
+                
+                <p>However, we are more than a commerce. We deeply invest in young artists, providing essential resources and fostering their growth. In supporting Art For Change, you're not merely purchasing art; you're backing a vision—a world where every artist, regardless of their origins, is given the stage to shine.</p>
+                
+                <a class="btn btn-primary" href="#" role="button">Learn More</a>
+            </div>
+        </section>
+    </div>
     
-    <div class="slideshow-container">
-        <img src="IMG_20230911_233509_701.jpg" alt="Image 1">
-        <img src="IMG_20230911_233446_278.jpg" alt="Image 2">
-        <img src="IMG_20230911_233539_998.jpg" alt="Image 3">
-        <img src="IMG_20230911_233609_820.jpg" alt="Image 4">
-      </div>
-      <div class="manual-navigation">
-        <button id="prev-button">Previous</button>
-        <button id="next-button">Next</button>
-      </div>
-    
-    <div class="research-text">
-    <h1>Art For Change (2019- Present )</h1>
-    <h2>Co-founder </h2>
-    <p>Nestled in Sylhet, Bangladesh, I co-founded the social enterprise Art For Change alongside Anupam Acharjee and Forhad Ahmed.  More than just a business, Art For Change stands as a movement, giving a voice to the untapped talents of students from marginalized communities.
-    </p> 
-    <p class="collor">  <strong class="colllor">Our Mission is:</strong> 
-  
- “Enlightening marginalized communities through art.” </p> <p>However, we are more than a commerce. We deeply invest in young artists, providing essential resources and fostering their growth. In supporting Art For Change, you're not merely purchasing art; you're backing a vision—a world where every artist, regardless of their origins, is given the stage to shine.</p>
-    <a class="btn btn-primary" href="#" role="button">Learn More</a>
-  </div>
-    
-    </section>
-      <footer>
-        <div>
-            <h1>Shushanta Acharjee </h1>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h1>Shushanta Acharjee</h1>
             <div class="footer-text">
                 <p>iDEM Program (PhD in Entrepreneurship and Management)</p>
-                <p>Facultat d'Economía i Empresa</p>  
-                <p>Universitat Autónoma de Barcelona</p> 
-                <p></p>
+                <p>Facultat d'Economía i Empresa</p>
+                <p>Universitat Autónoma de Barcelona</p>
             </div>
             <div class="footer-icon">
                 <a href="https://www.facebook.com/susanto.acharjee"><i class="fab fa-facebook"></i></a>
@@ -76,30 +354,39 @@
         </div>
     </footer>
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    
+    <!-- Slideshow Script -->
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll(".slideshow-container img");
         
         function showSlide(index) {
-          slides[currentSlide].style.display = "none";
-          currentSlide = index;
-          slides[currentSlide].style.display = "block";
+            slides[currentSlide].style.display = "none";
+            currentSlide = index;
+            slides[currentSlide].style.display = "block";
         }
         
         function nextSlide() {
-          showSlide((currentSlide + 1) % slides.length);
+            showSlide((currentSlide + 1) % slides.length);
         }
         
         function prevSlide() {
-          showSlide((currentSlide - 1 + slides.length) % slides.length);
+            showSlide((currentSlide - 1 + slides.length) % slides.length);
         }
         
-        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        // Initialize first slide
+        showSlide(0);
+        
+        // Auto-advance slides
+        setInterval(nextSlide, 5000);
         
         // Manual navigation buttons
         document.querySelector("#prev-button").addEventListener("click", prevSlide);
         document.querySelector("#next-button").addEventListener("click", nextSlide);
-      </script>
-      
+    </script>
 </body>
 </html>
