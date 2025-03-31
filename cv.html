@@ -3,65 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
-    <link rel="stylesheet" href="cv.css">
-      <link rel="stylesheet" href="footer.css">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>CV - Shushanta Acharjee</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Gelasio:ital,wght@1,600&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/71258d5dfb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/71258d5dfb.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #0b3954;
+            --secondary-color: #087E8B;
+            --accent-color: #FF5A5F;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #495057;
+            --bg-color: #ffffff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            padding-top: 80px; /* For fixed navbar */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        /* Navbar styles */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: white !important;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: white !important;
+        }
+        .navbar-toggler {
+            border-color: rgba(255,255,255,0.5);
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        /* CV section styles */
+        .cv-section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 15px 30px rgba(0,0,0,0.1);
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 90%;
+        }
+        .cv-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .cv-header h1 {
+            color: var(--primary-color);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .cv-header h1:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 25%;
+        }
+        .cv-image {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .cv-image img {
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+        .cv-image img:hover {
+            transform: scale(1.02);
+        }
+        .cv-text {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        .cv-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        /* Footer styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        footer h1 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .footer-text p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .footer-icon {
+            margin-top: 1.5rem;
+        }
+        .footer-icon a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .footer-icon a:hover {
+            color: var(--accent-color);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .cv-section {
+                padding: 2rem 1.5rem;
+            }
+            .cv-text p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    
-    <nav>
-        <input type="checkbox" id="check">
-           <label for="check" class="checkbtn">
-               <i class="fas fa-bars"></i>
-           </label>
-       <label class="logo">Shushanta Acharjee</label>
-       <ul>
-           <li><a href="index.html">HOME</a></li>
-           <li><a href="teaching.html">TEACHING</a></li>
-           <li><a href="research.html">RESEARCH</a></li>
-           <li><a href="venture.html">VENTURES</a></li>
-           <li><a class="active" href="cv.html">CV</a></li>
-           <li><a href="community.html">COMMUNITY & WELFARE </a></li>
-           
-           <li><a href="contact.html">CONTACT</a></li>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Shushanta Acharjee</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="teaching.html">Teaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="venture.html">Ventures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="community.html">Community & Welfare</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-       </ul>
-   </nav>
-    <section class="background-section">
-      
-        <div class="background-image">
-          
-        <img src="111111.jpg" >
-      </div>
-        <div class="background-text">
-          <h1>Curriculum Vitae</h1>
-          <p>Click The icon below for my CV</p>
-        
-            <div class="container1">
-                <a href=""><img src="40d80b8089c8418a961cb75d96d491f7.png" alt=""></a>
-          </div>
+<!-- CV Section -->
+<div class="container">
+    <section class="cv-section">
+        <div class="cv-header">
+            <h1>Curriculum Vitae</h1>
         </div>
-      </section>
-     <footer>
-        <div>
-            <h1>Shushanta Acharjee </h1>
-            <div class="footer-text">
-                <p>iDEM Program (PhD in Entrepreneurship and Management)</p>
-                <p>Facultat d'Economía i Empresa</p>  
-                <p>Universitat Autónoma de Barcelona</p> 
-                <p></p>
-            </div>
-            <div class="footer-icon">
-                <a href="https://www.facebook.com/susanto.acharjee"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/shushantaA60070?t=M2-MYhTbvVpZzKh-IruY0Q&s=08"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/shushanta-acharjee-47b461118/"><i class="fab fa-linkedin"></i></a>
-            </div>
+        <div class="cv-image">
+            <img src="111111.jpg" alt="CV Image" class="img-fluid">
         </div>
-    </footer>
+        <div class="cv-text">
+            <p>Click the icon below to download my CV</p>
+            <a href="#" class="btn btn-outline-secondary">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <h1>Shushanta Acharjee</h1>
+        <div class="footer-text">
+            <p>iDEM Program (PhD in Entrepreneurship and Management)</p>
+            <p>Facultat d'Economía i Empresa</p>
+            <p>Universitat Autónoma de Barcelona</p>
+        </div>
+        <div class="footer-icon">
+            <a href="https://www.facebook.com/susanto.acharjee"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/shushantaA60070?t=M2-MYhTbvVpZzKh-IruY0Q&s=08"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/shushanta-acharjee-47b461118/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
 </body>
 </html>
