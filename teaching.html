@@ -3,65 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="teaching.css">
-       <link rel="stylesheet" href="footer.css">
-       <link rel="stylesheet" href="nav.css">
+    <title>Teaching | Shushanta Acharjee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Gelasio:ital,wght@1,600&display=swap" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/71258d5dfb.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #0b3954;
+            --secondary-color: #087E8B;
+            --accent-color: #FF5A5F;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #495057;
+            --bg-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            padding-top: 80px; /* For fixed navbar */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: white !important;
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Main content styles */
+        .page-title {
+            background-color: var(--light-color);
+            padding: 3rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .page-title h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-title p {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .courses {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .course-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .course-title {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .course-level {
+            font-style: italic;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-description {
+            margin-left: 1rem;
+        }
+
+        .course-description li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-description li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer h1 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-text p {
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-icon {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-icon a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-icon a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .courses {
+                padding: 1rem;
+            }
+            
+            .course-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    
-    <nav>
-        <input type="checkbox" id="check">
-           <label for="check" class="checkbtn">
-               <i class="fas fa-bars"></i>
-           </label>
-       <label class="logo">Shushanta Acharjee</label>
-       <ul>
-           <li><a class="" href="index.html">HOME</a></li>
-           <li><a class="active" href="teaching.html">TEACHING</a></li>
-           <li><a href="research.html">RESEARCH</a></li>
-           <li><a href="venture.html">VENTURES</a></li>
-           <li><a href="cv.html">CV</a></li>
-           <li><a href="community.html">COMUNITY & WELFARE </a></li>
-           <li><a href="contact.html">CONTACT</a></li>
-       </ul>
-   </nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Shushanta Acharjee</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="teaching.html">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="venture.html">Ventures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cv.html">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community.html">Community & Welfare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-title">
+        <h1>Teaching Portfolio</h1>
+        <p>Courses and Educational Initiatives</p>
+    </div>
  
     <section class="courses">
+        <div class="course-card">
+            <h2 class="course-title">Global Business</h2>
+            <p class="course-level">3rd Year Bachelor</p>
+            <div class="course-description">
+                <li>Dive into the complexities of international trade, market strategies, and cross-cultural communication. Equip students to navigate the evolving dynamics of international regulations and the global business matrix.</li>
+            </div>
+        </div>
 
-        <div class="course1">
-       <h1 id="header">Courses Taught</h1>
-        <h2>Global Business(3rd Year Bachelor)</h2>
-        <p><li>•	Dive into the complexities of international trade, market strategies, and cross-cultural communication. Equip students to navigate the evolving dynamics of international regulations and the global business matrix.</li></p>
-        <h1>Consumer Behaviour I & II(2nd Year Bachelor)</h1>
-        <li>•	Unlock the psyche of the consumer. Begin with an exploration of internal variables like motivations and personal values. Progress to understand the external societal and cultural influences. Collaborate with industry giants like DANONE to blend theory with real-world application.</li>
-       <h1>Trend Search and Analysis(2nd Year Bachelor)</h1>
-       <li>•	Stay ahead in the digital age. Harness the potential of Google Trends, and master both the art and science of data collection and interpretation. Enable students to transform data-driven insights into actionable market strategies.</li>
-      <h1>Marketing Management(3rd Year Bachelor)</h1>
-      <li>•	Navigate the multifaceted world of marketing. Delve into the heart of marketing strategies, from timeless classics to modern innovations. Empower students to design and deploy impactful campaigns across diverse markets.</li>
-  <h1>Data Analysis for Business with R(4th Year Bachelor)</h1>
-  <li>•	Transmute raw data into business gold. Journey from foundational data manipulation in R to advanced statistical explorations. Practical hands-on sessions utilize rich datasets from platforms like Kaggle, GEM, and WVS.</li>
-  
-  <h1>International Strategy(3rd Year Bachelor)</h1>
-  <li>•	Master the global chessboard of business. Decipher market entry tactics, global competitive dynamics, and balance local customization with global paradigms. Equipstudents to strategizeonthe global stage.</li>
-   <h1>Business Management(Masters Student)</h1>
-   <li>•	Elevate understanding to a strategic level. Emphasize the organization's heartbeat—its structure, culture, and strategy. Through immersive case studies and models, enable students to make informed business decisions.</li>
-<h1>Business Model Design(Masters Student)</h1>
-<li>•	Beyond theory, embrace application. While dissecting the nuances of diverse business models, ensure every student creates their own blueprint—a robust business plan. Guide them from conception to crystallization, readying them for the professional arena.</li>
+        <div class="course-card">
+            <h2 class="course-title">Consumer Behaviour I & II</h2>
+            <p class="course-level">2nd Year Bachelor</p>
+            <div class="course-description">
+                <li>Unlock the psyche of the consumer. Begin with an exploration of internal variables like motivations and personal values. Progress to understand the external societal and cultural influences. Collaborate with industry giants like DANONE to blend theory with real-world application.</li>
+            </div>
+        </div>
 
-</div>
+        <div class="course-card">
+            <h2 class="course-title">Trend Search and Analysis</h2>
+            <p class="course-level">2nd Year Bachelor</p>
+            <div class="course-description">
+                <li>Stay ahead in the digital age. Harness the potential of Google Trends, and master both the art and science of data collection and interpretation. Enable students to transform data-driven insights into actionable market strategies.</li>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <h2 class="course-title">Marketing Management</h2>
+            <p class="course-level">3rd Year Bachelor</p>
+            <div class="course-description">
+                <li>Navigate the multifaceted world of marketing. Delve into the heart of marketing strategies, from timeless classics to modern innovations. Empower students to design and deploy impactful campaigns across diverse markets.</li>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <h2 class="course-title">Data Analysis for Business with R</h2>
+            <p class="course-level">4th Year Bachelor</p>
+            <div class="course-description">
+                <li>Transmute raw data into business gold. Journey from foundational data manipulation in R to advanced statistical explorations. Practical hands-on sessions utilize rich datasets from platforms like Kaggle, GEM, and WVS.</li>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <h2 class="course-title">International Strategy</h2>
+            <p class="course-level">3rd Year Bachelor</p>
+            <div class="course-description">
+                <li>Master the global chessboard of business. Decipher market entry tactics, global competitive dynamics, and balance local customization with global paradigms. Equip students to strategize on the global stage.</li>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <h2 class="course-title">Business Management</h2>
+            <p class="course-level">Masters Student</p>
+            <div class="course-description">
+                <li>Elevate understanding to a strategic level. Emphasize the organization's heartbeat—its structure, culture, and strategy. Through immersive case studies and models, enable students to make informed business decisions.</li>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <h2 class="course-title">Business Model Design</h2>
+            <p class="course-level">Masters Student</p>
+            <div class="course-description">
+                <li>Beyond theory, embrace application. While dissecting the nuances of diverse business models, ensure every student creates their own blueprint—a robust business plan. Guide them from conception to crystallization, readying them for the professional arena.</li>
+            </div>
+        </div>
     </section>
+
     <footer>
         <div>
-            <h1>Shushanta Acharjee </h1>
+            <h1>Shushanta Acharjee</h1>
             <div class="footer-text">
                 <p>iDEM Program (PhD in Entrepreneurship and Management)</p>
                 <p>Facultat d'Economía i Empresa</p>  
-                <p>Universitat Autónoma de Barcelona</p> 
-                <p></p>
+                <p>Universitat Autónoma de Barcelona</p>
             </div>
             <div class="footer-icon">
                 <a href="https://www.facebook.com/susanto.acharjee"><i class="fab fa-facebook"></i></a>
@@ -70,6 +322,11 @@
                 <a href="https://www.linkedin.com/in/shushanta-acharjee-47b461118/"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-    </footer> 
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
 </body>
 </html>
